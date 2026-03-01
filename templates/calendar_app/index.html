@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Какой сегодня день?</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            transition: background 0.5s;
+        }
+
+        .monday-bg { background-color: #fce4ec; color: #ad1457; }
+        .tuesday-bg { background-color: #e8f5e9; color: #2e7d32; }
+        .wednesday-bg { background-color: #e3f2fd; color: #1565c0; }
+        .thursday-bg { background-color: #fffde7; color: #fbc02d; }
+        .friday-bg { background-color: #f3e5f5; color: #6a1b9a; }
+        .saturday-bg { background-color: #efebe9; color: #4e342e; }
+        .sunday-bg { background-color: #ffebee; color: #c62828; }
+
+        .card {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="{{ bg_style }}">
+    <div class="card">
+        <p>Сегодня {{ current_date }}</p>
+        <h1 style="font-size: 4rem;">{{ day_name }}</h1>
+        <br>
+        <a href="/" style="color: inherit;">← В главное меню</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Автомир | {{ title }}</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'auto_home' %}">Главная</a> |
+        <a href="{% url 'toyota' %}">Тойота</a> |
+        <a href="{% url 'honda' %}">Хонда</a> |
+        <a href="{% url 'renault' %}">Рено</a>
+    </nav>
+    <hr>
+    <h1>Раздел: {{ title }}</h1>
+    <p>Добро пожаловать на страницу, посвященную автомобилям марки <strong>{{ brand }}</strong>!</p>
+    <br>
+</body>
+</html>
